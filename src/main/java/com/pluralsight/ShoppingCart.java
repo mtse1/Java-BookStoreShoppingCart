@@ -63,4 +63,13 @@ public class ShoppingCart {
 			exception.printStackTrace();
 		}
 	}
+	
+	public void updateCartitem(int index, int quantity) {
+		try {
+			CartItem item = cartItems.get(index);
+			item.setQuantity(quantity);			
+		} catch (IndexOutOfBoundsException exception) {
+			exception.printStackTrace();
+		}
+	}
 }
